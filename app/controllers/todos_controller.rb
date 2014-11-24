@@ -12,7 +12,7 @@ class TodosController < ApplicationController
    # end
     
     def delete
-      #put delete logic here
+      Todo.last.destroy     
     end
 
   end
