@@ -11,9 +11,8 @@ class TodosController < ApplicationController
    #   alert("failed to create with #{new_todo}")
    # end
     
-    def delete
-      Todo.last.destroy     
-    end
-
+  def delete
+    Todo.last.destroy     
   end
+
 end
