@@ -2,5 +2,8 @@
 <h1>Shared To-Do App</h1>
 <p>All your to-dos here</p>
 <ul>
-  <li> <%= @todo_item1 %> </li></ul>
+  <% @todo_array.each do |t| %>
+    <li> #todo item here </li>
+    <% end %>
+</ul>
 
