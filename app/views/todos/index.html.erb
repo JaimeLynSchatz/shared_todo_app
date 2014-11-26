@@ -1,16 +1,27 @@
 <title>Shared To-Do App</title>
-<h1>Shared To-Do App</h1>
-<p>All your to-dos here</p>
+<div class="container">
+  <div class="row">
+    <div class="span4">
+
+      <h1>Shared To-Do App</h1>
+      <hr>
+
+      <p>All your to-dos here</p>
 
 <form>
   <input type="text" name=new_todo placeholder="WIP - enter new todo here"></input>
   <input type="submit">
 </form>
 
-<ul>
+      <div class="well">
+
   <% @todo_items.each do |t| %>
     <li> <%= t.todo_item %> </li>
     <% end %>
-</ul>
+      </div> <!-- well -->
+    </div> <!-- span4 -->
+  </div> <!-- row -->
 
 <a href="/todos/delete">Delete last todo</a>
+
+</div> <!-- container -->
