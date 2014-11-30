@@ -13,12 +13,17 @@
         <%= submit_tag("Add todo", :class => "btn") %>
       <% end %>
 
-
-
       <% if flash[:error] %>
         <div class="alert alert-danger">
           <button type="button" class="close" data-dismiss="alert" >OK</button>
           <strong><%= flash[:error] %></strong>
+        </div>
+      <% end %>
+
+      <% if flash[:success] %>
+        <div class="alert alert-success">
+          <button type="button" class="close" data-dismiss="alert" >OK</button>
+          <strong><%= flash[:success] %></strong>
         </div>
       <% end %>
 
