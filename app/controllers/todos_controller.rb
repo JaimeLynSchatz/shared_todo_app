@@ -11,7 +11,7 @@ class TodosController < ApplicationController
 
   def add
     todo = Todo.create(:todo_item => params[:todo_text])
-    if !todo.valid?
+    if !todo.valid?  # or say unless todo.valid?
       flash[:error] = todo.errors.full_messages.join("<br>").html_safe
     end
     redirect_to :action => 'index'
