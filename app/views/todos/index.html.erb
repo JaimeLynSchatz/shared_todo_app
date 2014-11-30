@@ -12,6 +12,13 @@
         <%= submit_tag("Add todo", :class=>"btn") %>
       <% end %>
 
+      <% if !flash[:error].nil? %>
+        <div class="alert alert-error">
+          <button type="button" class="close" data-dismiss="alert" >x</button>
+          <strong><%= flash[:error] %></strong>
+        </div>
+      <% end %>
+
       <div class="well">
 
         <% @todo_items.each do |t| %>
