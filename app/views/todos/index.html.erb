@@ -5,14 +5,13 @@
 
       <h1>Shared To-Do App</h1>
       <hr>
-<div class="well">
-  <p>Add something</p>
-  <form>
-    <input type="text" name=new_todo placeholder="WIP - enter new todo here"></input>
-    <input type="submit">
-  </form>
-</div> <!-- end input well -->
+
       <h3>All your to-dos here</h3>
+      <%= form_tag("/todos/add", :method=>"post") do %>
+        <%= text_field_tag(:todo_text) %>
+        <%= submit_tag("Add todo", :class=>"btn") %>
+      <% end %>
+
       <div class="well">
 
         <% @todo_items.each do |t| %>

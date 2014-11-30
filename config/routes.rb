@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   get 'todos/index'
   # remove get '/todos/delete' and replace with
-  match "todos/delete" => "todos#delete", :as => :delete
+  match "todos/delete" => "todos#delete", :via => [:delete], :as => :delete
+
+  match "todos/add" => "todos#add", :via => [:post], :as => :add
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
