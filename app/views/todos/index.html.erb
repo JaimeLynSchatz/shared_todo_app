@@ -7,10 +7,13 @@
       <hr>
 
       <h3>All your to-dos here</h3>
-      <%= form_tag("/todos/add", :method=>"post") do %>
+
+      <%= form_tag("/todos/add", :method => "post") do %>
         <%= text_field_tag(:todo_text) %>
-        <%= submit_tag("Add todo", :class=>"btn") %>
+        <%= submit_tag("Add todo", :class => "btn") %>
       <% end %>
+
+
 
       <% if flash[:error] %>
         <div class="alert alert-danger">
