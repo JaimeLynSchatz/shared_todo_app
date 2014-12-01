@@ -20,6 +20,7 @@ else
   end
 
   def complete
+    params.permit(:completed)
     param[:todos_checkbox].each do |check|
       todo_id = check
       t = Todo.find_by_id(todo_id)
