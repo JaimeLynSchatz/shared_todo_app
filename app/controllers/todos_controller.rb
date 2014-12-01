@@ -21,10 +21,10 @@ else
 
   def complete
     params.permit(:completed)
-    param[:todos_checkbox].each do |check|
+    params[:todos_checkbox].each do |check|
       todo_id = check
       t = Todo.find_by_id(todo_id)
-      alert("Here I am!")
+      flash[:success] = "You're trying to complete an item!".html_safe
       t.update_attribute(:completed, true)
     end
     redirect_to :action => 'index'
