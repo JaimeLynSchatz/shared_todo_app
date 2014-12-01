@@ -19,4 +19,14 @@ else
     redirect_to :action => 'index'
   end
 
+  def complete
+    param[:todos_checkbox].each do |check|
+      todo_id = check
+      t = Todo.find_by_id(todo_id)
+      alert("Here I am!")
+      t.update_attribute(:completed, true)
+    end
+    redirect_to :action => 'index'
+  end
+
 end
